@@ -64,9 +64,3 @@ npm run dev
 - `POST /api/dashboard/items` - create dashboard record
 - `PUT /api/dashboard/items/:id` - update dashboard record
 - `DELETE /api/dashboard/items/:id` - delete dashboard record
-
-## Deployment (Optional)
-
-- Render blueprint is included in `render.yaml` for backend + static frontend deployment.
-- Vercel SPA rewrite support is included in `client/vercel.json`.
-
