@@ -148,30 +148,47 @@ function Dashboard() {
         <div className="dashboard-body">
           <form className="crud-form" onSubmit={handleSave}>
             <h3>{editId ? "Edit Record" : "Add New Record"}</h3>
-            <label htmlFor="title">Title</label>
-            <input
-              id="title"
-              name="title"
-              value={form.title}
-              onChange={handleChange}
-              placeholder="Enter record title"
-            />
+            <p className="form-subtitle">
+              Track leads, tasks, or users from one place.
+            </p>
 
-            <label htmlFor="type">Type</label>
-            <select id="type" name="type" value={form.type} onChange={handleChange}>
-              <option value="lead">Lead</option>
-              <option value="task">Task</option>
-              <option value="user">User</option>
-            </select>
+            <div className="field-group">
+              <label htmlFor="title">Title</label>
+              <input
+                id="title"
+                name="title"
+                value={form.title}
+                onChange={handleChange}
+                placeholder="Enter record title"
+              />
+            </div>
 
-            <label htmlFor="status">Status</label>
-            <input
-              id="status"
-              name="status"
-              value={form.status}
-              onChange={handleChange}
-              placeholder="active"
-            />
+            <div className="crud-grid">
+              <div className="field-group">
+                <label htmlFor="type">Type</label>
+                <select
+                  id="type"
+                  name="type"
+                  value={form.type}
+                  onChange={handleChange}
+                >
+                  <option value="lead">Lead</option>
+                  <option value="task">Task</option>
+                  <option value="user">User</option>
+                </select>
+              </div>
+
+              <div className="field-group">
+                <label htmlFor="status">Status</label>
+                <input
+                  id="status"
+                  name="status"
+                  value={form.status}
+                  onChange={handleChange}
+                  placeholder="active"
+                />
+              </div>
+            </div>
 
             <div className="form-actions">
               <button className="primary-btn" type="submit" disabled={saving}>
